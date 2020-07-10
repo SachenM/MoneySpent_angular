@@ -1,1 +1,16 @@
-<p>entry works!</p>
+
+<nav>
+    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" id="nav-expense-tab" data-toggle="tab" href="#nav-expense" role="tab" aria-controls="nav-expense" aria-selected="true">Expense</a>
+      <a class="nav-item nav-link" id="nav-income-tab" data-toggle="tab" href="#nav-income" role="tab" aria-controls="nav-income" aria-selected="false">Income</a>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active card card-body" id="nav-expense" role="tabpanel" aria-labelledby="nav-expense-tab">
+        <app-expense></app-expense>
+    </div>
+    <div class="tab-pane fade card card-body" id="nav-income" role="tabpanel" aria-labelledby="nav-income-tab">
+        <app-income></app-income>
+    </div>
+  </div>
+

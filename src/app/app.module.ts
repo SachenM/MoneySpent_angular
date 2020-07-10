@@ -11,6 +11,8 @@ import { TransferComponent } from './transfer/transfer.component';
 import { OthersComponent } from './others/others.component';
 import { ServiceComponent } from './others/service/service.component';
 import { ReportsComponent } from './others/reports/reports.component';
+import { ExpenseComponent } from './entry/expense/expense.component';
+import { IncomeComponent } from './entry/income/income.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { ReportsComponent } from './others/reports/reports.component';
     TransferComponent,
     OthersComponent,
     ServiceComponent,
-    ReportsComponent
+    ReportsComponent,
+    ExpenseComponent,
+    IncomeComponent
   ],
   imports: [
     BrowserModule
