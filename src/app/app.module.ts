@@ -13,6 +13,7 @@ import { ServiceComponent } from './others/service/service.component';
 import { ReportsComponent } from './others/reports/reports.component';
 import { ExpenseComponent } from './entry/expense/expense.component';
 import { IncomeComponent } from './entry/income/income.component';
+import { TransactionsComponent } from './transactions/transactions.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { IncomeComponent } from './entry/income/income.component';
     ServiceComponent,
     ReportsComponent,
     ExpenseComponent,
-    IncomeComponent
+    IncomeComponent,
+    TransactionsComponent
   ],
   imports: [
     BrowserModule

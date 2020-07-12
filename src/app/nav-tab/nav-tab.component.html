@@ -1,14 +1,35 @@
-<ul class="nav nav-tabs nav-fill">
+
+
+  <ul class="nav nav-pills nav-fill mb-3 mt-2" id="pills-tab" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" href="#">Entry</a>
+      <a class="nav-link active" id="pills-entry-tab" data-toggle="pill" href="#nav-entry" role="tab" aria-controls="nav-entry" aria-selected="true">Entry</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active" href="#">Transfer</a>
+      <a class="nav-link " id="pills-transfer-tab" data-toggle="pill" href="#nav-transfer" role="tab" aria-controls="nav-transfer" aria-selected="true">Transfer</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active" href="#">Others</a>
+      <a class="nav-link " id="pills-others-tab" data-toggle="pill" href="#nav-others" role="tab" aria-controls="nav-others" aria-selected="true">Others</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      <a class="nav-link disabled" id="pills-settings-tab" data-toggle="pill" href="#nav-settings" role="tab" aria-controls="nav-settings" aria-selected="true">Settings</a>
     </li>
   </ul>
+  
+  <div class="tab-content" id="nav-pillmain">
+    <div class="tab-pane fade show active card card-body" id="nav-entry" role="tabpanel" aria-labelledby="nav-expense-tab">
+      <app-comman-display></app-comman-display>
+      <app-entry></app-entry>
+    </div>
+    <div class="tab-pane fade card card-body" id="nav-transfer" role="tabpanel" aria-labelledby="nav-transfer-tab">
+      <app-comman-display></app-comman-display>
+      <app-transfer></app-transfer>      
+    </div>
+    <div class="tab-pane fade card card-body" id="nav-others" role="tabpanel" aria-labelledby="nav-others-tab">
+      <app-comman-display></app-comman-display>
+      <app-others></app-others>    
+    </div>
+    <div class="tab-pane fade card card-body" id="nav-settings" role="tabpanel" aria-labelledby="nav-settings-tab">
+      <app-comman-display></app-comman-display>
+      <app-others></app-others>    
+    </div>
+  </div>
