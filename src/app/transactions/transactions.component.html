@@ -1,1 +1,10 @@
-<p>transactions works!</p>
+
+    <app-nav-tab (transacTypeSelected)="onGetTransacType($event)"></app-nav-tab>
+    <app-comman-display [getTransacType]="this.transacType"></app-comman-display>
+    <app-entry *ngIf="transacType==='Entry'" class="tab-pane   card card-body" ></app-entry>
+    <app-transfer *ngIf="transacType==='Transfer'" class="tab-pane   card card-body"></app-transfer> 
+    <app-others *ngIf="transacType==='Others'" class="tab-pane   card card-body"></app-others>
+    <app-others *ngIf="transacType==='Settings'" class="tab-pane   card card-body"></app-others>  
+    
+
+    
