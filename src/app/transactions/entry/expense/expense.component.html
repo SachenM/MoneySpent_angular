@@ -12,9 +12,9 @@
       <label class="input-group-text" for="inputGroupSelect01">From Acc</label>
       <select class="custom-select" id="inputGroupSelect01">
           <option selected>Choose...</option>
-          <option value="1">Walet</option>
-          <option value="2">HDFC</option>
-          <option value="3">SBI</option>
+          <option *ngFor="let account of accounts" >{{ account.acc_name }}</option>
+          <!-- <option value="2">HDFC</option>
+          <option value="3">SBI</option> -->
         </select>
   </div>
 

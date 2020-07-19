@@ -14,6 +14,9 @@ import { ReportsComponent } from './transactions/others/reports/reports.componen
 import { ExpenseComponent } from './transactions/entry/expense/expense.component';
 import { IncomeComponent } from './transactions/entry/income/income.component';
 import { TransactionsComponent } from './transactions/transactions.component';
+import { SettingComponent } from './setting/setting.component';
+import { ChangeColorDirective } from './sharedFolder/directive/change-color.directive';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { TransactionsComponent } from './transactions/transactions.component';
     ReportsComponent,
     ExpenseComponent,
     IncomeComponent,
-    TransactionsComponent
+    TransactionsComponent,
+    SettingComponent,    
+    ChangeColorDirective,
+  
   ],
   imports: [
     BrowserModule
