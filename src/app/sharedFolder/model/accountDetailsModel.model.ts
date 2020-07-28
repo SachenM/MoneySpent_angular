@@ -1,4 +1,4 @@
-export class accountDetails {
+export class accountDetailsModel {
     constructor(
         public acc_ID : number,
         public acc_name : string,

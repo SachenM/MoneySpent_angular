@@ -1,10 +1,10 @@
 import { userService } from "./userDetails.service";
-import { accountDetails } from "../model/accountDetails.model";
+import { accountDetailsModel } from "../model/accountDetailsModel.model";
 import {  Injectable } from '@angular/core';
 
 @Injectable()
 export class accountsService   {
-    public accountsList : accountDetails[] = [ ]  ;
+    public accountsList : accountDetailsModel[] = [ ]  ;
     constructor(private userSer: userService){
         this.accountsList.push(...this.userSer.users[this.userSer.userIDSelected].accounts)
     }

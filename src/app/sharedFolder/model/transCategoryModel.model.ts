@@ -1,5 +1,5 @@
 
-export class transCategory {
+export class transCategoryModel {
     constructor(
         public cat_ID : number,        
         public categoryName : string,

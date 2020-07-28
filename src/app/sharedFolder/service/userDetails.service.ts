@@ -1,8 +1,8 @@
-import { userDetails } from "../model/userDetails.model";
-import { accountDetails } from "../model/accountDetails.model";
-import { transaction } from "../model/transaction.model";
-import { transCategory } from "../model/transCategory.model";
-import { subCategory } from "../model/subCategory.model";
+import { userDetails } from "../model/userDetailsModel.model";
+import { accountDetailsModel } from "../model/accountDetailsModel.model";
+import { transactionModel } from "../model/transactionModel.model";
+import { transCategoryModel } from "../model/transCategoryModel.model";
+import { subCategoryModel } from "../model/subCategoryModel.model";
 
 export class userService{
     public userIDSelected : number = 0;
@@ -14,14 +14,14 @@ export class userService{
             'M',
             25,
             [
-                new accountDetails(1,'Wallet','W',550.00,'Y'),
-                new accountDetails(2,'Bank Savings','S',85000.00,'Y'),
-                new accountDetails(3,'Wallet','W',550.00,'Y'),
-                new accountDetails(4,'Wallet','W',550.00,'Y'),
-                new accountDetails(5,'Wallet','W',550.00,'Y'),
+                new accountDetailsModel(1,'Wallet1','W',550.00,'Y'),
+                new accountDetailsModel(2,'Bank Savings','S',85000.00,'Y'),
+                new accountDetailsModel(3,'Wallet2','W',550.00,'Y'),
+                new accountDetailsModel(4,'Wallet3','W',550.00,'Y'),
+                new accountDetailsModel(5,'Wallet4','W',550.00,'Y'),
             ],
             [
-                new transaction(1,
+                new transactionModel(1,
                     '7/19/2020',
                     1,
                     1,
@@ -31,14 +31,14 @@ export class userService{
                     'Anugragha')
                 ],
             [
-                new transCategory(
+                new transCategoryModel(
                     1,
                     'card',
                     'EXP'
                 )
             ],
             [
-                new subCategory(
+                new subCategoryModel(
                     1,
                     'Food'
                 )]    
