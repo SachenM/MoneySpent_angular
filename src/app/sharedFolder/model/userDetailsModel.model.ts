@@ -1,7 +1,7 @@
 import { accountDetailsModel } from "./accountDetailsModel.model";
 import { transactionModel } from "./transactionModel.model";
 import { transCategoryModel } from "./transCategoryModel.model";
-import { subCategoryModel } from "./subCategoryModel.model";
+import { generalCategoryModel } from "./generalCategoryModel.model";
 
 export class userDetails {
     constructor(
@@ -13,7 +13,7 @@ export class userDetails {
         public accounts : accountDetailsModel[],
         public transactions : transactionModel[],
         public transCategories : transCategoryModel[],
-        public subCategories : subCategoryModel[]
+        public GeneralCategories : generalCategoryModel[]
 
     ){
 

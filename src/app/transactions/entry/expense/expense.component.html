@@ -10,11 +10,8 @@
 
   <div class="input-group input-group-lg mb-3">
       <label class="input-group-text" for="inputGroupSelect01">From Acc</label>
-      <select class="custom-select" id="inputGroupSelect01">
-          <option selected>Choose...</option>
+      <select class="custom-select" id="inputGroupSelect01">          
           <option *ngFor="let account of accounts" >{{ account.acc_name }}</option>
-          <!-- <option value="2">HDFC</option>
-          <option value="3">SBI</option> -->
         </select>
   </div>
 
@@ -26,10 +23,7 @@
           <label class="input-group-text" for="inputGroupSelect02">Category</label>
         </div>
         <select class="custom-select" id="inputGroupSelect02">
-          <option selected>Choose...</option>
-          <option value="1">Yearly</option>
-          <option value="2">Monthly</option>
-          <option value="3">Daily</option>
+          <option *ngFor="let generalCategory of generalCategories" >{{ generalCategory.cat_Name }}</option>
         </select>
     </div>
     
@@ -38,11 +32,7 @@
           <label class="input-group-text " for="inputGroupSelect03">Type</label>
         </div>
         <select class="custom-select" id="inputGroupSelect03">
-          <option selected>Choose...</option>
-          <option value="1">Food</option>
-          <option value="2">Grocery</option>
-          <option value="3">House Rent</option>
-          <option value="4">Travel</option>
+          <option *ngFor="let transCategory of transCategories" >{{ transCategory.categoryName }}</option>
         </select>
       </div>
     </div>
