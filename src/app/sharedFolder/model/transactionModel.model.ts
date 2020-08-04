@@ -1,6 +1,7 @@
 
 export class transactionModel {
     constructor(
+        public user_ID : number,
         public trans_ID : number,
         public trans_date : string,
         public cat_id : number,

@@ -10,10 +10,10 @@ export class userDetails {
         public l_name : string,
         public age : number,
 
-        public accounts : accountDetailsModel[],
-        public transactions : transactionModel[],
-        public transCategories : transCategoryModel[],
-        public GeneralCategories : generalCategoryModel[]
+        // public accounts : accountDetailsModel[],
+        // public transactions : transactionModel[],
+        // public transCategories : transCategoryModel[],
+        // public GeneralCategories : generalCategoryModel[]
 
     ){
 
