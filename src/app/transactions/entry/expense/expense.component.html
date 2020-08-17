@@ -4,13 +4,14 @@
       <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroup-sizing-lg">Amount</span>
       </div>
-      <input type="text" class="form-control" placeholder="0.00" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      <input type="text" class="form-control" placeholder="0.00" aria-label="Sizing example input" 
+      aria-describedby="inputGroup-sizing-lg" #amountInput>
   </div>
 
 
   <div class="input-group input-group-lg mb-3">
       <label class="input-group-text" for="inputGroupSelect01">From Acc</label>
-      <select class="custom-select" id="inputGroupSelect01">          
+      <select class="custom-select" id="inputGroupSelect01" #acc_nameInput>          
           <option *ngFor="let account of accounts" >{{ account.acc_name }}</option>
         </select>
   </div>
@@ -22,7 +23,7 @@
         <div class="input-group-prepend">
           <label class="input-group-text" for="inputGroupSelect02">Category</label>
         </div>
-        <select class="custom-select" id="inputGroupSelect02">
+        <select class="custom-select" id="inputGroupSelect02" #gencatInput>
           <option *ngFor="let generalCategory of generalCategories" >{{ generalCategory.cat_Name }}</option>
         </select>
     </div>
@@ -32,7 +33,7 @@
           <label class="input-group-text " for="inputGroupSelect03">Type</label>
         </div>
         <select class="custom-select" id="inputGroupSelect03">
-          <option *ngFor="let transCategory of transCategories" >{{ transCategory.categoryName }}</option>
+          <option *ngFor="let transCategory of transCategories" #transCatInput>{{ transCategory.categoryName }}</option>
         </select>
       </div>
     </div>
@@ -44,5 +45,5 @@
         </label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary" >Confirm</button>
+    <button type="submit" class="btn btn-primary" (click)="onExpenseSubmit()">Confirm</button>
   </form>
