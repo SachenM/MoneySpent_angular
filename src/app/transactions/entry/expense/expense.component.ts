@@ -20,7 +20,8 @@ export class ExpenseComponent implements OnInit {
   generalCategories : generalCategoryModel[] = [];
   Str: string[] =['1111','222'];
 
-  @ViewChild('amountInput') acc_nameInputref : ElementRef;
+  @ViewChild('amountInput') amountInputref : ElementRef;
+  @ViewChild('acc_nameInput') acc_nameInputRef : ElementRef
 
   constructor(private accService : accountsService,
     private transCatService : transCategoryService,
@@ -29,33 +30,26 @@ export class ExpenseComponent implements OnInit {
     private userService : userService) { }
 
   ngOnInit(): void {
+    this.accService.accountDetailsChanged.subscribe((acc:accountDetailsModel[])=>{
+      this.accounts=[] 
     this.accounts.push( ...this.accService.accountsList)
+    })
+    this.accounts.push( ...this.accService.accountsList)
+    console.log('Acc length : ' + this.accounts.length)
     this.transCategories.push(...this.transCatService.transCategory.filter(function(transCategoryModel){return transCategoryModel.cat_type == 'EXP'; }))
     this.generalCategories.push(...this.generalCatService.generalCategory)
   }
 
   onExpenseSubmit(){  
     console.log('submit')
-      var today = new Date();
-      var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-      var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-      var dateTime = date+' '+time;
+    this.transacService.insertTransaction(1,1,this.acc_nameInputRef.nativeElement.value,-1,
+      this.amountInputref.nativeElement.value,'' )
 
-    this.transacService.transactionList.push(
-      new transactionModel(
-        this.userService.userIDSelected,
-        Math.max.apply(Math, this.transacService.transactionList.map(function(array) { return array.trans_ID;})) + 1,
-        dateTime,
-        1,
-        1,
-        1,
-        2,
-        this.acc_nameInputref.nativeElement.value,
-        ''      
-      ))
+      this.accService.updateAccountbalance(this.acc_nameInputRef.nativeElement.value,
+        (+this.amountInputref.nativeElement.value) * (-1))
 
-      this.accService.updateAccountbalance(1,this.acc_nameInputref.nativeElement.value)
 
+//this.accService.accountsList[0].acc_ID
   }
 
 }

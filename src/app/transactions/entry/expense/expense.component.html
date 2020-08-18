@@ -12,7 +12,7 @@
   <div class="input-group input-group-lg mb-3">
       <label class="input-group-text" for="inputGroupSelect01">From Acc</label>
       <select class="custom-select" id="inputGroupSelect01" #acc_nameInput>          
-          <option *ngFor="let account of accounts" >{{ account.acc_name }}</option>
+          <option *ngFor="let account of accounts" [value]="account.acc_ID">{{ account.acc_name }}</option>
         </select>
   </div>
 
@@ -45,5 +45,5 @@
         </label>
       </div>
     </div>
-    <button type="submit" class="btn btn-primary" (click)="onExpenseSubmit()">Confirm</button>
+    <button  class="btn btn-primary" (click)="onExpenseSubmit()">Confirm</button>
   </form>
